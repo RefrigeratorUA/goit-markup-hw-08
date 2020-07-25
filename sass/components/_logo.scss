@@ -1,0 +1,17 @@
+.logo {
+  display: inline-block;
+  font-family: $fontFamilyLogo;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+  color: $actualColorText;
+  &:visited {
+    color: $actualColorText;
+  }
+}
+.logo--black {
+  color: $secondColorText;
+}
+.logo--white {
+  color: $whiteIndex;
+}

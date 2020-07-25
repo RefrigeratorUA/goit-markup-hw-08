@@ -1,0 +1,19 @@
+@import './utils/variables';
+@import './base/normalize';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/first-settings';
+@import './components/logo';
+@import './components/social-icon';
+@import './components/page-header';
+@import './components/section-hero';
+@import './components/section-skills';
+@import './components/section-works';
+@import './components/section-team';
+@import './components/section-clients';
+@import './components/page-footer';
+@import './components/modal';
+// Portfolio Page
+@import './components/section-portfolio';
+@import './components/portfolio-filter';
+@import './components/portfolio-gallery';

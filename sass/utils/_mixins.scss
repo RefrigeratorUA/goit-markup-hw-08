@@ -1,0 +1,16 @@
+@mixin centeredFlex($type: flex, $yCentered: center, $xCentered: center) {
+  display: $type;
+  align-items: $yCentered;
+  justify-content: $xCentered;
+}
+@mixin mixinTransition($args...) {
+  @if (length($args) == 0) {
+    transition: all $timeTransition $cubeRubiks $timeDelay;
+  } @else {
+    $options: null;
+    @for $i from 0 to length($args) {
+      $options: $options, #{nth($args, $i + 1)} $timeTransition $cubeRubiks $timeDelay;
+    }
+    transition: $options;
+  }
+}

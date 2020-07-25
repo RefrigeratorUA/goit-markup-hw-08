@@ -1,0 +1,37 @@
+// Section Clients
+.section-clients {
+  margin-bottom: 94px;
+
+  & h2 {
+    @extend %headH2;
+  }
+}
+
+.clients-list {
+  display: flex;
+  margin: 0 -15px;
+
+  & > li {
+    width: 170px;
+    margin: 0 15px;
+    text-align: center;
+  }
+}
+
+.clients-list__link {
+  @include centeredFlex(flex, center, center);
+  height: 90px;
+
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: $socialSvgColor;
+  fill: $socialSvgColor;
+
+  @include mixinTransition(border-color, fill);
+
+  &:hover,
+  &:focus {
+    border-color: $actualColorText;
+    fill: $actualColorText;
+  }
+}

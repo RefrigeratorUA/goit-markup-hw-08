@@ -1,0 +1,79 @@
+// Header
+.page-header {
+  border-bottom: 1px solid $borderBottomColorHeader;
+}
+
+.page-header__wrapper {
+  @include centeredFlex(flex, center, flex-start);
+}
+
+.page-header__logo {
+  margin-right: 85px;
+}
+.page-header__nav {
+  margin-right: auto;
+}
+.nav-list {
+  display: flex;
+  font-weight: 500;
+  letter-spacing: $letterSpacing02;
+
+  & > li:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  & > li > a {
+    display: block;
+    position: relative;
+    line-height: 75px;
+    color: inherit;
+
+    @include mixinTransition(color);
+  }
+
+  & a:hover,
+  & a:focus,
+  & .active {
+    color: $actualColorText;
+  }
+
+  & .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $actualColorText;
+  }
+}
+
+.header-contacts {
+  @include centeredFlex(flex, center, flex-start);
+
+  & > li:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  & a {
+    font-weight: 500;
+    letter-spacing: $letterSpacing02;
+    color: inherit;
+    fill: currentColor;
+
+    @include mixinTransition(color, fill);
+  }
+
+  & a:hover,
+  & a:focus {
+    color: $actualColorText;
+    fill: $actualColorText;
+  }
+}
+
+.header-contacts__icon {
+  padding-right: 10px;
+  vertical-align: middle;
+  line-height: 0;
+}

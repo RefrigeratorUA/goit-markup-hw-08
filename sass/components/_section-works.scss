@@ -1,0 +1,32 @@
+// Section What's Do
+.section-works {
+  margin-bottom: 94px;
+
+  & h2 {
+    @extend %headH2;
+  }
+}
+.works-list {
+  display: flex;
+  margin: 0 -15px;
+
+  & > li {
+    display: flex;
+    position: relative;
+    margin: 0 15px;
+  }
+}
+.works-list__descr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  background-color: $worksDescrBg;
+
+  & h3 {
+    @extend %headH3;
+    text-align: center;
+    color: $whiteIndex;
+  }
+}

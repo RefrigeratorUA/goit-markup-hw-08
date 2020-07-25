@@ -1,0 +1,32 @@
+// Section Skills
+.section-skills {
+  margin-bottom: 94px;
+}
+
+.skills-list {
+  display: flex;
+  margin: 0 -15px;
+
+  & > li {
+    width: calc((100% - 120px) / 4);
+    margin: 0 15px;
+  }
+
+  & h3 {
+    @extend %headH3;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    margin: 0;
+    line-height: 1.71;
+  }
+}
+.skills-list__svg {
+  margin-bottom: 30px;
+  padding: 25px 0;
+  line-height: 0;
+  text-align: center;
+  background-color: $bgSecond;
+  border-radius: 4px;
+}
