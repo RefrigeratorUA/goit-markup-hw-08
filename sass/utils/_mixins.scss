@@ -14,3 +14,25 @@
     transition: $options;
   }
 }
+@mixin listReset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin headH2() {
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: $letterSpacingMain;
+  line-height: 1.17;
+  color: $headsColorText;
+}
+@mixin headH3() {
+  text-align: left;
+  font-size: $fontSizeMain;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacingMain;
+  line-height: 1.14;
+  color: $headsColorText;
+}

@@ -1,20 +1,22 @@
 .social-icon {
-  @include centeredFlex(flex, center, center);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: $whiteIndex;
-  fill: $socialSvgColor;
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex(flex, center, center);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $whiteIndex;
+    fill: $socialSvgColor;
 
-  @include mixinTransition(background-color, fill);
+    @include mixinTransition(background-color, fill);
 
-  &--dark {
-    background-color: $footerSocialBg;
-    fill: $whiteIndex;
-  }
-  &:hover,
-  &:focus {
-    background-color: $actualColorText;
-    fill: $whiteIndex;
+    &--dark {
+      background-color: $footerSocialBg;
+      fill: $whiteIndex;
+    }
+    &:hover,
+    &:focus {
+      background-color: $actualColorText;
+      fill: $whiteIndex;
+    }
   }
 }

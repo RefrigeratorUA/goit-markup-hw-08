@@ -1,16 +1,22 @@
 body {
-  font-family: $fontFamilyMain;
-  font-size: $fontSizeMain;
-  letter-spacing: $letterSpacingMain;
-  background-color: $whiteIndex;
-  color: $colorTextMain;
+  @media screen and (min-width: 1200px) {
+    font-family: $fontFamilyMain;
+    font-size: $fontSizeMain;
+    letter-spacing: $letterSpacingMain;
+    background-color: $whiteIndex;
+    color: $colorTextMain;
+  }
 }
 a,
 a:visited {
-  text-decoration: none;
+  @media screen and (min-width: 1200px) {
+    text-decoration: none;
+  }
 }
 ul {
-  @extend %listReset;
+  @media screen and (min-width: 1200px) {
+    @include listReset();
+  }
 }
 h1,
 h2,
@@ -18,23 +24,26 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  text-align: center;
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    text-align: center;
+  }
 }
-// h2 {
-//   font-size: 36px;
-//   line-height: 1.67;
-//   font-weight: 700;
-//   color: var(--heads-color-text);
-// }
 img {
   display: block; /* убиваем нижние отступы! */
 }
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .container {
-  width: $containerMaxWidth;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
+  @media screen and (min-width: 1200px) {
+    width: $containerMaxWidth;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
 }
 .visually-hidden {
   position: absolute;

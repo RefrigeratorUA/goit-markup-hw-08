@@ -1,72 +1,79 @@
 // Modal
 .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $backdropBg;
-  opacity: 1;
+  @media screen and (min-width: 1200px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $backdropBg;
+    opacity: 1;
 
-  @include mixinTransition(opacity);
+    @include mixinTransition(opacity);
 
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
+    &.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
-  padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
-  background-color: $whiteIndex;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    padding: 40px;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: $whiteIndex;
 
-  border-radius: 4px;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
 
-  @include mixinTransition(transform);
+    @include mixinTransition(transform);
 
-  .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(1.05);
-  }
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
 
-  & h2 {
-    @extend %headH2;
-    margin: 0;
-    margin-bottom: 12px;
-    font-size: 20px;
-    line-height: 1.15;
+    & h2 {
+      // @extend %headH2;
+      @include headH2();
+      margin: 0;
+      margin-bottom: 12px;
+      font-size: 20px;
+      line-height: 1.15;
+    }
   }
 }
 
 .btn-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  margin-top: 8px;
-  margin-right: 8px;
-  padding: 0;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    margin-right: 8px;
+    padding: 0;
 
-  line-height: 0;
-  cursor: pointer;
+    line-height: 0;
+    cursor: pointer;
 
-  border: 1px solid $btnCloseBorderColor;
-  border-radius: 50%;
-  background-color: $whiteIndex;
-  fill: $secondColorText;
+    border: 1px solid $btnCloseBorderColor;
+    border-radius: 50%;
+    background-color: $whiteIndex;
+    fill: $secondColorText;
 
-  @include mixinTransition(fill);
+    @include mixinTransition(fill);
 
-  &:hover,
-  &:focus {
-    fill: $actualColorText;
+    &:hover,
+    &:focus {
+      fill: $actualColorText;
+    }
   }
 }
 
@@ -74,210 +81,214 @@
 
 /* Modal */
 .textarea-wrapper {
-  position: relative;
-  height: 120px;
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    height: 120px;
+  }
 }
 
 .form-callback {
-  padding-top: 18px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 18px;
 
-  // .form-callback-field
-  &-field {
-    position: relative;
-    display: block;
-    margin-bottom: 28px;
-  }
-
-  // .form-callback-input
-  &-input {
-    width: 100%;
-    margin: 0;
-    padding: 12px 18px;
-    padding-left: 42px;
-
-    font-size: $fontSizeMain;
-    line-height: 1.14;
-    color: $colorTextMain;
-
-    border: 1px solid;
-    border-color: $modalInputBorderColor;
-    border-radius: 4px;
-    cursor: pointer;
-
-    @include mixinTransition(border-color);
-
-    &:focus {
-      outline: none;
-      border-color: $actualColorText;
-    }
-  }
-
-  //   .form-callback-icon
-  &-icon {
-    position: absolute;
-    top: 50%;
-    left: 19px;
-    transform: translateY(-50%);
-
-    fill: $headsColorText;
-
-    @include mixinTransition(fill);
-
-    .form-callback-input:focus ~ & {
-      fill: $actualColorText;
+    // .form-callback-field
+    &-field {
+      position: relative;
+      display: block;
+      margin-bottom: 28px;
     }
 
-    &--checkbox {
-      display: inline-block;
-      width: 16px;
-      height: 15px;
+    // .form-callback-input
+    &-input {
+      width: 100%;
+      margin: 0;
+      padding: 12px 18px;
+      padding-left: 42px;
+
+      font-size: $fontSizeMain;
+      line-height: 1.14;
+      color: $colorTextMain;
+
+      border: 1px solid;
+      border-color: $modalInputBorderColor;
+      border-radius: 4px;
       cursor: pointer;
-      border: 2px solid;
-      border-color: $headsColorText;
-      border-radius: 2px;
-      background-color: $whiteIndex;
 
-      @include mixinTransition(border-color, background-color);
+      @include mixinTransition(border-color);
 
-      .form-callback-checkbox--input:focus ~ & {
-        border: 2px solid $actualColorText;
-        border-radius: 2px;
+      &:focus {
+        outline: none;
+        border-color: $actualColorText;
+      }
+    }
+
+    //   .form-callback-icon
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 19px;
+      transform: translateY(-50%);
+
+      fill: $headsColorText;
+
+      @include mixinTransition(fill);
+
+      .form-callback-input:focus ~ & {
+        fill: $actualColorText;
       }
 
-      .form-callback-checkbox--input:checked ~ & {
-        background-color: $actualColorText;
-        background-image: url('../images/decor/svg/src/check-full.svg');
-        background-size: contain;
-        background-origin: border-box;
+      &--checkbox {
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        cursor: pointer;
         border: 2px solid;
-        border-color: transparent;
+        border-color: $headsColorText;
+        border-radius: 2px;
+        background-color: $whiteIndex;
+
+        @include mixinTransition(border-color, background-color);
+
+        .form-callback-checkbox--input:focus ~ & {
+          border: 2px solid $actualColorText;
+          border-radius: 2px;
+        }
+
+        .form-callback-checkbox--input:checked ~ & {
+          background-color: $actualColorText;
+          background-image: url('../images/decor/svg/src/check-full.svg');
+          background-size: contain;
+          background-origin: border-box;
+          border: 2px solid;
+          border-color: transparent;
+        }
       }
     }
-  }
 
-  // .form-callback-label
-  &-label {
-    position: absolute;
-    top: 50%;
-    left: 42px;
-    font-size: $fontSizeMain;
-    line-height: 1.14;
-    letter-spacing: $letterSpacing01;
-    color: $colorTextMain;
-    transform: translate(0px, -50%);
+    // .form-callback-label
+    &-label {
+      position: absolute;
+      top: 50%;
+      left: 42px;
+      font-size: $fontSizeMain;
+      line-height: 1.14;
+      letter-spacing: $letterSpacing01;
+      color: $colorTextMain;
+      transform: translate(0px, -50%);
 
-    @include mixinTransition(font-size, line-height, color, transform);
+      @include mixinTransition(font-size, line-height, color, transform);
 
-    .form-callback-input:focus ~ &,
-    .form-callback-input:not(:placeholder-shown) ~ & {
-      font-size: 12px;
-      line-height: 1.17;
-      color: $actualColorText;
-      transform: translate(-23px, -40px);
-    }
-  }
-
-  // .form-callback-texarea
-  &-textarea {
-    width: 100%;
-    height: 100%;
-    padding: 12px 16px;
-    resize: none;
-    cursor: pointer;
-
-    font-size: $fontSizeMain;
-    letter-spacing: $letterSpacing01;
-    line-height: 1.14;
-
-    border: 1px solid;
-    border-color: $modalInputBorderColor;
-    border-radius: 4px;
-
-    color: $colorTextMain;
-
-    @include mixinTransition(border-color);
-
-    &:focus {
-      cursor: text;
-      outline: none;
-      border-color: $actualColorText;
-    }
-  }
-
-  // .form-callback-text
-  &-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: $fontSizeMain;
-    line-height: 1.14;
-    letter-spacing: $letterSpacing01;
-    color: $colorTextMain;
-    transform: translate(16px, 12px);
-
-    @include mixinTransition(font-size, line-height, color, transform);
-
-    .form-callback-textarea:focus ~ &,
-    .form-callback-textarea:not(:placeholder-shown) ~ & {
-      font-size: 12px;
-      line-height: 1.17;
-      color: $actualColorText;
-
-      transform: translate(17px, -19px);
+      .form-callback-input:focus ~ &,
+      .form-callback-input:not(:placeholder-shown) ~ & {
+        font-size: 12px;
+        line-height: 1.17;
+        color: $actualColorText;
+        transform: translate(-23px, -40px);
+      }
     }
 
-    &--checkbox {
-      margin-left: 7px;
-      margin-right: 4px;
+    // .form-callback-texarea
+    &-textarea {
+      width: 100%;
+      height: 100%;
+      padding: 12px 16px;
+      resize: none;
       cursor: pointer;
+
+      font-size: $fontSizeMain;
+      letter-spacing: $letterSpacing01;
+      line-height: 1.14;
+
+      border: 1px solid;
+      border-color: $modalInputBorderColor;
+      border-radius: 4px;
+
+      color: $colorTextMain;
+
+      @include mixinTransition(border-color);
+
+      &:focus {
+        cursor: text;
+        outline: none;
+        border-color: $actualColorText;
+      }
     }
-  }
 
-  // .form-callback-checkbox
-  &-checkbox {
-    @include centeredFlex(flex, center, center);
-    margin-top: 20px;
-    margin-bottom: 30px;
-
-    &--input {
+    // .form-callback-text
+    &-text {
       position: absolute;
       top: 0;
       left: 0;
-      appearance: none;
+      font-size: $fontSizeMain;
+      line-height: 1.14;
+      letter-spacing: $letterSpacing01;
+      color: $colorTextMain;
+      transform: translate(16px, 12px);
+
+      @include mixinTransition(font-size, line-height, color, transform);
+
+      .form-callback-textarea:focus ~ &,
+      .form-callback-textarea:not(:placeholder-shown) ~ & {
+        font-size: 12px;
+        line-height: 1.17;
+        color: $actualColorText;
+
+        transform: translate(17px, -19px);
+      }
+
+      &--checkbox {
+        margin-left: 7px;
+        margin-right: 4px;
+        cursor: pointer;
+      }
     }
 
-    & a {
-      color: $actualColorText;
-      text-decoration: underline;
+    // .form-callback-checkbox
+    &-checkbox {
+      @include centeredFlex(flex, center, center);
+      margin-top: 20px;
+      margin-bottom: 30px;
+
+      &--input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        appearance: none;
+      }
+
+      & a {
+        color: $actualColorText;
+        text-decoration: underline;
+      }
     }
-  }
 
-  // .form-callback-submit
-  &-submit {
-    display: block;
-    width: 200px;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    cursor: pointer;
+    // .form-callback-submit
+    &-submit {
+      display: block;
+      width: 200px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      cursor: pointer;
 
-    font-size: $fontSizeSecond;
-    font-weight: bold;
-    letter-spacing: $letterSpacing06;
-    line-height: 1.88;
-    color: $whiteIndex;
+      font-size: $fontSizeSecond;
+      font-weight: bold;
+      letter-spacing: $letterSpacing06;
+      line-height: 1.88;
+      color: $whiteIndex;
 
-    background-color: $actualColorText;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      background-color: $actualColorText;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    @include mixinTransition(background-color);
+      @include mixinTransition(background-color);
 
-    &:hover,
-    &:focus {
-      background-color: $modalSubmitHoverBg;
+      &:hover,
+      &:focus {
+        background-color: $modalSubmitHoverBg;
+      }
     }
   }
 }

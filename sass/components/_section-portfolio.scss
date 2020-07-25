@@ -1,7 +1,11 @@
 // Section Portfolio
 .section-portfolio {
-  margin: 94px auto;
+  @media screen and (min-width: 1200px) {
+    margin: 94px auto;
+  }
 }
 .section-portfolio p {
-  margin: 0;
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+  }
 }

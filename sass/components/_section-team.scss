@@ -1,52 +1,59 @@
 // Section Team
 .section-team {
-  margin-bottom: 94px;
-  padding: 94px 0;
-  background-color: $bgSecond;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 94px;
+    padding: 94px 0;
+    background-color: $bgSecond;
 
-  & h2 {
-    @extend %headH2;
+    & h2 {
+      // @extend %headH2;
+      @include headH2();
+    }
   }
 }
 
 .team-list {
-  display: flex;
-  margin: 0 -15px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin: 0 -15px;
 
-  & > li {
-    margin: 0 15px;
-    background-color: $whiteIndex;
+    & > li {
+      margin: 0 15px;
+      background-color: $whiteIndex;
 
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 1px 3px rgba(0, 0, 0, 0.12);
-  }
+      border-radius: 0px 0px 4px 4px;
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12);
+    }
 
-  & h3 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: $fontSizeSecond;
-    font-weight: 500;
-    line-height: 1.19;
-    color: $headsColorText;
-  }
+    & h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: $fontSizeSecond;
+      font-weight: 500;
+      line-height: 1.19;
+      color: $headsColorText;
+    }
 
-  & p {
-    margin: 0;
-    font-size: $fontSizeSecond;
-    line-height: 1.19;
-    text-align: center;
+    & p {
+      margin: 0;
+      font-size: $fontSizeSecond;
+      line-height: 1.19;
+      text-align: center;
+    }
   }
 }
 
 .team-list__social {
-  display: flex;
-  margin-top: 16px;
-  margin-bottom: 24px;
-  margin-left: 27px;
-  margin-right: 27px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    margin-left: 27px;
+    margin-right: 27px;
 
-  & > li {
-    margin: 0 5px;
+    & > li {
+      margin: 0 5px;
+    }
   }
 }
