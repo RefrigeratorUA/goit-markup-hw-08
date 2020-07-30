@@ -1,50 +1,38 @@
 body {
-  @media screen and (min-width: 1200px) {
-    font-family: $fontFamilyMain;
-    font-size: $fontSizeMain;
-    letter-spacing: $letterSpacingMain;
-    background-color: $whiteIndex;
-    color: $colorTextMain;
+  font-family: $fontFamilyMain;
+  font-size: $fontSizeMain;
+  letter-spacing: $letterSpacingMain;
+  background-color: $whiteIndex;
+  color: $colorTextMain;
+
+  &.modal-open {
+    overflow: hidden;
   }
 }
+
 a,
 a:visited {
-  @media screen and (min-width: 1200px) {
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
+
 ul {
-  @media screen and (min-width: 1200px) {
-    @include listReset();
-  }
+  @include listReset();
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @media screen and (min-width: 1200px) {
-    margin: 0;
-    text-align: center;
-  }
+  margin: 0;
+  text-align: center;
 }
+
 img {
   display: block; /* убиваем нижние отступы! */
 }
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.container {
-  @media screen and (min-width: 1200px) {
-    width: $containerMaxWidth;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 15px;
-  }
-}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

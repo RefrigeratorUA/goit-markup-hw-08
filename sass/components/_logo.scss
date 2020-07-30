@@ -1,23 +1,21 @@
 .logo {
-  @media screen and (min-width: 1200px) {
-    display: inline-block;
-    font-family: $fontFamilyLogo;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.19;
+  display: inline-block;
+  font-family: $fontFamilyLogo;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $actualColorText;
+  &:visited {
     color: $actualColorText;
-    &:visited {
-      color: $actualColorText;
-    }
+  }
+  @media screen and (min-width: $containerMaxWidth) {
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 .logo--black {
-  @media screen and (min-width: 1200px) {
-    color: $secondColorText;
-  }
+  color: $secondColorText;
 }
 .logo--white {
-  @media screen and (min-width: 1200px) {
-    color: $whiteIndex;
-  }
+  color: $whiteIndex;
 }

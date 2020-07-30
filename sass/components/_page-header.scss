@@ -1,31 +1,139 @@
 // Header
 .page-header {
-  @media screen and (min-width: 1200px) {
-    border-bottom: 1px solid $borderBottomColorHeader;
-  }
+  border-bottom: 1px solid $borderBottomColorHeader;
 }
 
 .page-header__wrapper {
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: $containerTabletWidth - 1px) {
+    position: relative;
+    padding: 16px 0;
+  }
+
+  @media screen and (min-width: $containerTabletWidth) {
     @include centeredFlex(flex, center, flex-start);
+    .mobile-button {
+      display: none;
+    }
+  }
+}
+
+.mobile-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &:focus,
+  &:hover {
+    overflow: hidden;
+    fill: $actualColorText;
+  }
+
+  &__close {
+    display: none;
+  }
+
+  &.is-open &__close {
+    display: block;
+  }
+
+  &.is-open &__open {
+    display: none;
+  }
+}
+.mobile-wrapper {
+  @media screen and (max-width: $containerTabletWidth - 1px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    width: calc(100% + 30px);
+    padding: 60px 0;
+    text-align: center;
+    background-color: $whiteIndex;
+    border-top: 1px solid $borderBottomColorHeader;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $containerTabletWidth) {
+    @include centeredFlex(flex, center, center);
+    width: 100%;
   }
 }
 
 .page-header__logo {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $containerTabletWidth) {
+    white-space: nowrap;
+    margin-right: 81px;
+  }
+  @media screen and (min-width: $containerMaxWidth) {
+    white-space: nowrap;
     margin-right: 85px;
   }
 }
 .page-header__nav {
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: $containerTabletWidth - 1px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $containerTabletWidth) {
     margin-right: auto;
   }
 }
+
 .nav-list {
-  @media screen and (min-width: 1200px) {
+  font-weight: 500;
+  letter-spacing: $letterSpacing02;
+  color: $headsColorText;
+
+  & > li > a {
+    position: relative;
+    color: inherit;
+
+    @include mixinTransition(color);
+  }
+
+  & a:hover,
+  & a:focus {
+    color: $actualColorText;
+  }
+
+  & .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $actualColorText;
+  }
+
+  @media screen and (max-width: $containerTabletWidth - 1px) {
+    font-size: $fontSizeThird;
+    line-height: 1.17;
+
+    & > li:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    & > li > a {
+      display: inline-block;
+      line-height: 33px;
+    }
+  }
+
+  @media screen and (min-width: $containerTabletWidth) {
     display: flex;
-    font-weight: 500;
-    letter-spacing: $letterSpacing02;
 
     & > li:not(:last-child) {
       margin-right: 50px;
@@ -33,61 +141,64 @@
 
     & > li > a {
       display: block;
-      position: relative;
-      line-height: 75px;
-      color: inherit;
-
-      @include mixinTransition(color);
-    }
-
-    & a:hover,
-    & a:focus,
-    & .active {
-      color: $actualColorText;
-    }
-
-    & .active::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background-color: $actualColorText;
+      line-height: 80px;
     }
   }
 }
 
 .header-contacts {
-  @media screen and (min-width: 1200px) {
+  & a {
+    font-weight: 500;
+    letter-spacing: $letterSpacing02;
+    color: inherit;
+    fill: currentColor;
+
+    @include mixinTransition(color, fill);
+  }
+
+  & a:hover,
+  & a:focus {
+    color: $actualColorText;
+    fill: $actualColorText;
+  }
+
+  @media screen and (max-width: $containerTabletWidth - 1px) {
+    & > li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    & a {
+      display: inline-block;
+      font-size: $fontSizeThird;
+      line-height: 1.17;
+    }
+  }
+
+  @media screen and (max-width: $containerMaxWidth - 1px) {
+    & > li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    & a {
+      display: inline-block;
+      font-size: $fontSizeTabletContacts;
+      line-height: 1.17;
+    }
+  }
+
+  @media screen and (min-width: $containerMaxWidth) {
     @include centeredFlex(flex, center, flex-start);
 
     & > li:not(:last-child) {
       margin-right: 30px;
     }
-
-    & a {
-      font-weight: 500;
-      letter-spacing: $letterSpacing02;
-      color: inherit;
-      fill: currentColor;
-
-      @include mixinTransition(color, fill);
-    }
-
-    & a:hover,
-    & a:focus {
-      color: $actualColorText;
-      fill: $actualColorText;
-    }
   }
 }
 
 .header-contacts__icon {
-  @media screen and (min-width: 1200px) {
-    padding-right: 10px;
-    vertical-align: middle;
-    line-height: 0;
+  padding-right: 10px;
+  vertical-align: middle;
+
+  @media screen and (max-width: $containerMaxWidth - 1px) {
+    padding-right: 8px;
   }
 }

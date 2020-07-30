@@ -1,0 +1,17 @@
+.container {
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: $containerMobileWidth) {
+    width: $containerMobileWidth;
+    background-color: lightgrey;
+  }
+  @media screen and (min-width: $containerTabletWidth) {
+    width: $containerTabletWidth;
+    background-color: goldenrod;
+  }
+  @media screen and (min-width: $containerMaxWidth) {
+    width: $containerMaxWidth;
+    background-color: tomato;
+  }
+}
