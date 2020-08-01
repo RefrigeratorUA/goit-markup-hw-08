@@ -6,6 +6,7 @@
 .page-header__wrapper {
   @media screen and (max-width: $containerTabletWidth - 1px) {
     position: relative;
+    z-index: 666;
     padding: 16px 0;
   }
 

@@ -1,11 +1,12 @@
 // Section Portfolio
 .section-portfolio {
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: $containerMaxWidth - 1px) {
+    margin: 60px auto;
+  }
+  @media screen and (min-width: $containerMaxWidth) {
     margin: 94px auto;
   }
 }
 .section-portfolio p {
-  @media screen and (min-width: 1200px) {
-    margin: 0;
-  }
+  margin: 0;
 }

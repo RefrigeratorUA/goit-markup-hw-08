@@ -1,27 +1,38 @@
 // Portfolio Gallery List
 
 .portfolio-list {
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: $containerTabletWidth - 1px) {
+    & > li {
+      display: block;
+    }
+    & > li:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $containerTabletWidth) and (max-width: $containerMaxWidth - 1px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > li {
+      width: calc((100% - 30px) / 2);
+    }
+
+    & > li:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+
+    & > li:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $containerMaxWidth) {
     display: flex;
     flex-wrap: wrap;
 
     & > li {
       width: calc((100% - 60px) / 3);
-
-      & > a {
-        display: block;
-        position: relative;
-        overflow: hidden;
-        box-shadow: none;
-
-        @include mixinTransition(box-shadow);
-
-        &:hover,
-        &:focus {
-          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-            0px 1px 1px rgba(0, 0, 0, 0.12);
-        }
-      }
     }
 
     & > li:not(:nth-child(3n)) {
@@ -32,68 +43,93 @@
       margin-bottom: 30px;
     }
   }
-}
 
-.portfolio-list__img {
-  @media screen and (min-width: 1200px) {
+  & > li > a {
+    display: block;
     position: relative;
+    overflow: hidden;
+    box-shadow: none;
+
+    @include mixinTransition(box-shadow);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
   }
 }
 
+.portfolio-list__img {
+  position: relative;
+}
+.portfolio-list__img img {
+  width: 100%;
+}
+
 .portfolio-list__p {
-  @media screen and (min-width: 1200px) {
-    position: absolute;
-    left: 0;
-    height: 100%;
+  @media screen and (max-width: $containerTabletWidth - 1px) {
+    padding: 77px 24px;
+  }
+
+  @media screen and (min-width: $containerTabletWidth) and (max-width: $containerMaxWidth - 1px) {
+    padding: 49px 24px;
+  }
+
+  @media screen and (min-width: $containerMaxWidth) {
     padding: 63px 24px;
-    background-color: $portfolioParagrBg;
+  }
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: $portfolioParagrBg;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(0);
+
+  @include mixinTransition(transform);
+
+  & p {
+    display: block;
+    height: 100%;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(0);
 
-    @include mixinTransition(transform);
+    font-size: $fontSizeThird;
+    line-height: 1.56;
+    letter-spacing: $letterSpacingMain;
+    color: $whiteIndex;
+  }
 
-    & p {
-      display: block;
-      height: 100%;
-      overflow: hidden;
-
-      font-size: $fontSizeThird;
-      line-height: 1.56;
-      letter-spacing: $letterSpacingMain;
-      color: $whiteIndex;
-    }
-
-    .portfolio-list > li > a:hover &,
-    .portfolio-list > li > a:focus & {
-      transform: translateY(-100%);
-      opacity: 1;
-    }
+  .portfolio-list > li > a:hover &,
+  .portfolio-list > li > a:focus & {
+    transform: translateY(-100%);
+    opacity: 1;
   }
 }
 
 .portfolio-list__text {
-  @media screen and (min-width: 1200px) {
-    position: relative;
-    padding: 20px 24px;
-    border: 1px solid $portfolioItemBorderColor;
-    border-top: none;
-    background-color: $whiteIndex;
+  position: relative;
+  padding: 20px 24px;
+  border: 1px solid $portfolioItemBorderColor;
+  border-top: none;
+  background-color: $whiteIndex;
 
-    & h2 {
-      text-align: left;
-      font-weight: 700;
-      font-size: $fontSizeThird;
-      line-height: 2;
-      letter-spacing: $letterSpacing06;
-      color: $headsColorText;
-    }
+  & h2 {
+    max-height: 36px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    text-align: left;
+    font-weight: 700;
+    font-size: $fontSizeThird;
+    line-height: 2;
+    letter-spacing: $letterSpacing06;
+    color: $headsColorText;
+  }
 
-    & p {
-      font-size: $fontSizeSecond;
-      line-height: 1.88;
-      letter-spacing: $letterSpacingMain;
-      color: $colorTextMain;
-    }
+  & p {
+    font-size: $fontSizeSecond;
+    line-height: 1.88;
+    letter-spacing: $letterSpacingMain;
+    color: $colorTextMain;
   }
 }
