@@ -1,39 +1,35 @@
 // Section What's Do
 .section-works {
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 94px;
+  @media screen and (max-width: $containerMaxWidth - 1px) {
+    display: none;
+  }
 
-    & h2 {
-      // @extend %headH2;
-      @include headH2();
-    }
+  margin-bottom: 94px;
+
+  & h2 {
+    @include headH2();
   }
 }
 .works-list {
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    margin: 0 -15px;
+  display: flex;
+  margin: 0 -15px;
 
-    & > li {
-      display: flex;
-      position: relative;
-      margin: 0 15px;
-    }
+  & > li {
+    display: flex;
+    position: relative;
+    margin: 0 15px;
   }
 }
 .works-list__descr {
-  @media screen and (min-width: 1200px) {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 27px 0;
-    background-color: $worksDescrBg;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  background-color: $worksDescrBg;
 
-    & h3 {
-      // @extend %headH3;
-      text-align: center;
-      color: $whiteIndex;
-    }
+  & h3 {
+    text-align: center;
+    color: $whiteIndex;
   }
 }
