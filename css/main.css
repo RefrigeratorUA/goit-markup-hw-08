@@ -285,6 +285,8 @@ h6 {
 img {
   display: block;
   /* убиваем нижние отступы! */
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -836,10 +838,6 @@ img {
     line-height: 1.17;
     color: #212121;
   }
-}
-
-.team-list img {
-  width: 100%;
 }
 
 .team-list h3 {
@@ -1764,10 +1762,6 @@ img {
 
 .portfolio-list__img {
   position: relative;
-}
-
-.portfolio-list__img img {
-  width: 100%;
 }
 
 .portfolio-list__p {

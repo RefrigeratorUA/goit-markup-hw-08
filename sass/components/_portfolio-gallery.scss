@@ -63,9 +63,6 @@
 .portfolio-list__img {
   position: relative;
 }
-.portfolio-list__img img {
-  width: 100%;
-}
 
 .portfolio-list__p {
   @media screen and (max-width: $containerTabletWidth - 1px) {
