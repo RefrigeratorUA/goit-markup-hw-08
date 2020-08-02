@@ -163,7 +163,26 @@
           </h2>
           <ul class="works-list">
             <li>
-              <img src="./images/content/img/index/desktop.jpg" alt="Десктопные приложения" />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/goods/desktop.webp,
+                    ./images/content/img/index/goods/desktop@2x.webp 2x,
+                    ./images/content/img/index/goods/desktop@3x.webp 3x
+                  "
+                />
+                <img
+                  srcset="
+                    ./images/content/img/index/goods/desktop.jpg,
+                    ./images/content/img/index/goods/desktop@2x.jpg 2x,
+                    ./images/content/img/index/goods/desktop@3x.jpg 3x
+                  "
+                  src="./images/content/img/index/goods/desktop.jpg"
+                  alt="Десктопные приложения"
+                  loading="lazy"
+                />
+              </picture>
               <div class="works-list__descr">
                 <h3>
                   Десктопные приложения
@@ -171,7 +190,26 @@
               </div>
             </li>
             <li>
-              <img src="./images/content/img/index/mobile.jpg" alt="Мобильные приложения" />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/goods/mobile.webp,
+                    ./images/content/img/index/goods/mobile@2x.webp 2x,
+                    ./images/content/img/index/goods/mobile@3x.webp 3x
+                  "
+                />
+                <img
+                  srcset="
+                    ./images/content/img/index/goods/mobile.jpg,
+                    ./images/content/img/index/goods/mobile@2x.jpg 2x,
+                    ./images/content/img/index/goods/mobile@3x.jpg 3x
+                  "
+                  src="./images/content/img/index/goods/mobile.jpg"
+                  alt="Мобильные приложения"
+                  loading="lazy"
+                />
+              </picture>
               <div class="works-list__descr">
                 <h3>
                   Мобильные приложения
@@ -179,7 +217,26 @@
               </div>
             </li>
             <li>
-              <img src="./images/content/img/index/desing.jpg" alt="Дизайнерские решения" />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/goods/desing.webp,
+                    ./images/content/img/index/goods/desing@2x.webp 2x,
+                    ./images/content/img/index/goods/desing@3x.webp 3x
+                  "
+                />
+                <img
+                  srcset="
+                    ./images/content/img/index/goods/desing.jpg,
+                    ./images/content/img/index/goods/desing@2x.jpg 2x,
+                    ./images/content/img/index/goods/desing@3x.jpg 3x
+                  "
+                  src="./images/content/img/index/goods/desing.jpg"
+                  alt="Дизайнерские решения"
+                  loading="lazy"
+                />
+              </picture>
               <div class="works-list__descr">
                 <h3>
                   Дизайнерские решения
@@ -198,11 +255,72 @@
           </h2>
           <ul class="team-list">
             <li>
-              <img
-                src="./images/content/img/index/person-1.jpg"
-                alt="Николай Кучеренко фото"
-                title="Николай Кучеренко"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/kucherenko/450.webp     450w,
+                    ./images/content/img/index/team/kucherenko/450@2x.webp  900w,
+                    ./images/content/img/index/team/kucherenko/450@3x.webp 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/kucherenko/270.webp    270w,
+                    ./images/content/img/index/team/kucherenko/270@2x.webp 540w,
+                    ./images/content/img/index/team/kucherenko/270@3x.webp 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/kucherenko/354.webp     354w,
+                    ./images/content/img/index/team/kucherenko/354@2x.webp  708w,
+                    ./images/content/img/index/team/kucherenko/354@3x.webp 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <source
+                  srcset="
+                    ./images/content/img/index/team/kucherenko/450.jpg     450w,
+                    ./images/content/img/index/team/kucherenko/450@2x.jpg  900w,
+                    ./images/content/img/index/team/kucherenko/450@3x.jpg 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <source
+                  srcset="
+                    ./images/content/img/index/team/kucherenko/270.jpg    270w,
+                    ./images/content/img/index/team/kucherenko/270@2x.jpg 540w,
+                    ./images/content/img/index/team/kucherenko/270@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="
+                    ./images/content/img/index/team/kucherenko/354.jpg     354w,
+                    ./images/content/img/index/team/kucherenko/354@2x.jpg  708w,
+                    ./images/content/img/index/team/kucherenko/354@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <img
+                  src="./images/content/img/index/team/kucherenko/354.jpg"
+                  alt="Николай Кучеренко фото"
+                  title="Николай Кучеренко"
+                />
+              </picture>
               <h3>
                 Николай Кучеренко
               </h3>
@@ -241,11 +359,73 @@
               </ul>
             </li>
             <li>
-              <img
-                src="./images/content/img/index/person-2.jpg"
-                alt="Ольга Иванова фото"
-                title="Ольга Иванова"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/ivanova/450.webp     450w,
+                    ./images/content/img/index/team/ivanova/450@2x.webp  900w,
+                    ./images/content/img/index/team/ivanova/450@3x.webp 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/ivanova/270.webp    270w,
+                    ./images/content/img/index/team/ivanova/270@2x.webp 540w,
+                    ./images/content/img/index/team/ivanova/270@3x.webp 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/ivanova/354.webp     354w,
+                    ./images/content/img/index/team/ivanova/354@2x.webp  708w,
+                    ./images/content/img/index/team/ivanova/354@3x.webp 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <source
+                  srcset="
+                    ./images/content/img/index/team/ivanova/450.jpg     450w,
+                    ./images/content/img/index/team/ivanova/450@2x.jpg  900w,
+                    ./images/content/img/index/team/ivanova/450@3x.jpg 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <source
+                  srcset="
+                    ./images/content/img/index/team/ivanova/270.jpg    270w,
+                    ./images/content/img/index/team/ivanova/270@2x.jpg 540w,
+                    ./images/content/img/index/team/ivanova/270@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="
+                    ./images/content/img/index/team/ivanova/354.jpg     354w,
+                    ./images/content/img/index/team/ivanova/354@2x.jpg  708w,
+                    ./images/content/img/index/team/ivanova/354@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <img
+                  src="./images/content/img/index/team/ivanova/354.jpg"
+                  alt="Ольга Иванова фото"
+                  title="Ольга Иванова"
+                />
+              </picture>
+
               <h3>
                 Ольга Иванова
               </h3>
@@ -284,11 +464,73 @@
               </ul>
             </li>
             <li>
-              <img
-                src="./images/content/img/index/person-3.jpg"
-                alt="Андрей Шевченко фото"
-                title="Андрей Шевченко"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/shevchenko/450.webp     450w,
+                    ./images/content/img/index/team/shevchenko/450@2x.webp  900w,
+                    ./images/content/img/index/team/shevchenko/450@3x.webp 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/shevchenko/270.webp    270w,
+                    ./images/content/img/index/team/shevchenko/270@2x.webp 540w,
+                    ./images/content/img/index/team/shevchenko/270@3x.webp 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/shevchenko/354.webp     354w,
+                    ./images/content/img/index/team/shevchenko/354@2x.webp  708w,
+                    ./images/content/img/index/team/shevchenko/354@3x.webp 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <source
+                  srcset="
+                    ./images/content/img/index/team/shevchenko/450.jpg     450w,
+                    ./images/content/img/index/team/shevchenko/450@2x.jpg  900w,
+                    ./images/content/img/index/team/shevchenko/450@3x.jpg 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <source
+                  srcset="
+                    ./images/content/img/index/team/shevchenko/270.jpg    270w,
+                    ./images/content/img/index/team/shevchenko/270@2x.jpg 540w,
+                    ./images/content/img/index/team/shevchenko/270@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="
+                    ./images/content/img/index/team/shevchenko/354.jpg     354w,
+                    ./images/content/img/index/team/shevchenko/354@2x.jpg  708w,
+                    ./images/content/img/index/team/shevchenko/354@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <img
+                  src="./images/content/img/index/team/shevchenko/354.jpg"
+                  alt="Андрей Шевченко фото"
+                  title="Андрей Шевченко"
+                />
+              </picture>
+
               <h3>
                 Андрей Шевченко
               </h3>
@@ -327,11 +569,73 @@
               </ul>
             </li>
             <li>
-              <img
-                src="./images/content/img/index/person-4.jpg"
-                alt="Иван Николаев фото"
-                title="Иван Николаев"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/nikolaev/450.webp     450w,
+                    ./images/content/img/index/team/nikolaev/450@2x.webp  900w,
+                    ./images/content/img/index/team/nikolaev/450@3x.webp 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/nikolaev/270.webp    270w,
+                    ./images/content/img/index/team/nikolaev/270@2x.webp 540w,
+                    ./images/content/img/index/team/nikolaev/270@3x.webp 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./images/content/img/index/team/nikolaev/354.webp     354w,
+                    ./images/content/img/index/team/nikolaev/354@2x.webp  708w,
+                    ./images/content/img/index/team/nikolaev/354@3x.webp 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <source
+                  srcset="
+                    ./images/content/img/index/team/nikolaev/450.jpg     450w,
+                    ./images/content/img/index/team/nikolaev/450@2x.jpg  900w,
+                    ./images/content/img/index/team/nikolaev/450@3x.jpg 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="450px"
+                />
+                <source
+                  srcset="
+                    ./images/content/img/index/team/nikolaev/270.jpg    270w,
+                    ./images/content/img/index/team/nikolaev/270@2x.jpg 540w,
+                    ./images/content/img/index/team/nikolaev/270@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="
+                    ./images/content/img/index/team/nikolaev/354.jpg     354w,
+                    ./images/content/img/index/team/nikolaev/354@2x.jpg  708w,
+                    ./images/content/img/index/team/nikolaev/354@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+
+                <img
+                  src="./images/content/img/index/team/nikolaev/354.jpg"
+                  alt="Иван Николаев фото"
+                  title="Иван Николаев"
+                />
+              </picture>
+
               <h3>
                 Иван Николаев
               </h3>
