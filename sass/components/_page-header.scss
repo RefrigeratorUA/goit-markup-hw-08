@@ -105,7 +105,8 @@
   }
 
   & a:hover,
-  & a:focus {
+  & a:focus,
+  .active {
     color: $actualColorText;
   }
 
