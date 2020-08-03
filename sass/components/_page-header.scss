@@ -6,7 +6,6 @@
 .page-header__wrapper {
   @media screen and (max-width: $containerTabletWidth - 1px) {
     position: relative;
-    z-index: 666;
     padding: 16px 0;
   }
 
@@ -49,6 +48,7 @@
   }
 }
 .mobile-wrapper {
+  z-index: 666;
   @media screen and (max-width: $containerTabletWidth - 1px) {
     display: none;
     position: absolute;

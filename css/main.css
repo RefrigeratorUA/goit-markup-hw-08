@@ -388,7 +388,6 @@ img {
 @media screen and (max-width: 767px) {
   .page-header__wrapper {
     position: relative;
-    z-index: 666;
     padding: 16px 0;
   }
 }
@@ -438,6 +437,10 @@ img {
 
 .mobile-button.is-open .mobile-button__open {
   display: none;
+}
+
+.mobile-wrapper {
+  z-index: 666;
 }
 
 @media screen and (max-width: 767px) {
